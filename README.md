@@ -9,7 +9,7 @@ For this project, refactor and test as much as possible while you are building. 
 ## Script
 
 ```
-"lint": "eslint 'index.js'",
+"lint": "eslint dist/index.js",
 "build": "npx tsc",
 "start": "nodemon src/index.ts",
 "jasmine": "jasmine",
