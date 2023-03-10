@@ -3,7 +3,7 @@ import resizeImage from './api/resizeImage';
 
 const routes: Router = Router();
 
-routes.get('/', (req: Request, res: Response) => {
+routes.get('/', (req: Request, res: Response): void => {
   console.log();
   res.send('main api route');
 });

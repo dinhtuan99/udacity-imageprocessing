@@ -10,7 +10,7 @@ type QueryParams = {
 
 const resizeImage: Router = Router();
 
-resizeImage.get('/', async (req: Request, res: Response) => {
+resizeImage.get('/', async (req: Request, res: Response): Promise<void> => {
   const param: QueryParams = req.query as unknown as QueryParams;
   if (param.filename) {
     const imagePath = path.resolve('assets/full/' + `${param.filename}.jpg`);

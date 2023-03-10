@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint dist/index.js",
+    "lint": "eslint src/**/*.ts",
     "build": "npx tsc",
     "start": "nodemon src/index.ts",
     "jasmine": "jasmine",
