@@ -1,13 +1,12 @@
-import express from 'express';
+import { Router, Request, Response } from 'express';
 import resizeImage from './api/resizeImage';
-import logging from './middlewares/logging';
 
-const routes = express.Router();
+const routes: Router = Router();
 
-routes.get('/', (req, res) => {
-    console.log();
-    res.send('main api route');
+routes.get('/', (req: Request, res: Response) => {
+  console.log();
+  res.send('main api route');
 });
-routes.use('/images', logging, resizeImage);
+routes.use('/images', resizeImage);
 
 export default routes;

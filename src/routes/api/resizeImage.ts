@@ -1,4 +1,4 @@
-import express from 'express';
+import { Router, Request, Response } from 'express';
 import path from 'path';
 import imageProcessing from '../../utilities/imageProcessing';
 
@@ -8,9 +8,9 @@ type QueryParams = {
   height: string;
 };
 
-const resizeImage = express.Router();
+const resizeImage: Router = Router();
 
-resizeImage.get('/', async (req, res) => {
+resizeImage.get('/', async (req: Request, res: Response) => {
   const param: QueryParams = req.query as unknown as QueryParams;
   if (param.filename) {
     const imagePath = path.resolve('assets/full/' + `${param.filename}.jpg`);

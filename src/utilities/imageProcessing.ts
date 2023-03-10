@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import sharp from 'sharp';
 
-async function checkImageExist(path: string) {
+async function checkImageExist(path: string): Promise<boolean> {
   try {
     await fs.access(path);
     return true;
@@ -15,7 +15,7 @@ async function resizeImageByPath(
   pathThumb: string,
   width: number,
   height: number
-) {
+): Promise<void> {
   await sharp(path)
     .resize(width, height, {
       fit: sharp.fit.inside,
