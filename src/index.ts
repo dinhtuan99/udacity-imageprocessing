@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './routes'; 
+import routes from './routes';
 import expressWinston from 'express-winston';
 import logging from './routes/middlewares/logging';
 
@@ -16,7 +16,7 @@ app.use(
   })
 );
 
-app.use("/api", routes);
+app.use('/api', routes);
 
 app.listen(port, () => {
   logging.info(`server start at localhost:${port}`);
