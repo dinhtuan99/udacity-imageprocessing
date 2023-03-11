@@ -12,3 +12,4 @@
 {"level":"info","message":"server start at localhost:3000","service":"Imageprocessing API"}
 {"level":"info","message":"HTTP GET /api/images?filename=fjord&width=200&height=200 200 7ms","meta":{},"service":"Imageprocessing API"}
 {"level":"info","message":"server start at localhost:3000","service":"Imageprocessing API"}
+{"level":"info","message":"server start at localhost:3000","service":"Imageprocessing API"}
